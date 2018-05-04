@@ -2,9 +2,9 @@
 Does some simple but cool shit with a container and openshift oc cp
 
 To build your own container:
-- Clone this repo
-- Build the container
-Markup : * -  e.g. 'docker build -t my_test_container:test1 ./
+Markup : * - Clone this repo
+         * - Build the container
+           * -  e.g. 'docker build -t my_test_container:test1 ./
          * - Get your docker images
            * - e.g. 'sudo docker images'
          * - Start the container
