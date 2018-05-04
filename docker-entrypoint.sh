@@ -14,8 +14,17 @@ oc login $OC_SERVER:8443 --username=$OC_UN --password=$OC_PW --insecure-skip-tls
 oc project $OC_PROJECT
 ## Grep for and add some add'l HUB PODs - how to use $1, $2, etc. for POD name vars?
 
-# Get all Namespaces and stuff into an array, trim the first line of the oc get
-ARRAY_OF_NS=("${(@f)$(oc get ns | cut -d ' ' -f1 | awk '{if(NR>1)print}')}")
+# Get all Namespaces and stuff into an array, trim the first line off the oc get
+ARRAY_OF_NS=(${(f)$(oc get ns | cut -d ' ' -f1 | awk '{if(NR>1)print}')})
+# get length of an array
+arraylength=${#array[@]}
+
+# use for loop to read all values and indexes
+for (( i=1; i<${arraylength}+1; i++ ));
+do
+  echo $i " / " ${arraylength} " : " ${array[$i-1]}
+done
+
 NS=$1
 PODS=$2
 OC_OUT_DIR=$3
