@@ -31,5 +31,5 @@ oc cp $OC_PROJECT/$SOLR:/bin/ $OC_CP_TMP
 cd /tmp && ls -l
 mkdir -p $OC_TAR_DIR
 chmod 777 $OC_TAR_DIR
-tar -cvzf $OC_CP_TMP/hackathon2018.tar $OC_CP_TMP
+tar -cvzf $OC_TAR_DIR/hackathon2018.tar $OC_CP_TMP
 ls -l $OC_TAR_DIR
