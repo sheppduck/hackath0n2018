@@ -14,6 +14,8 @@ oc login $OC_SERVER:8443 --username=$OC_UN --password=$OC_PW --insecure-skip-tls
 oc project $OC_PROJECT
 ## Grep for and add some add'l HUB PODs - how to use $1, $2, etc. for POD name vars?
 
+PODS="$(oc get pods | cut -d ' ' -f1)"
+echo $PODS
 WEBAPP="$(oc get pods | grep webapp | cut -d ' ' -f1)"
 echo "$WEBAPP"
 SOLR="$(oc get pods | grep solr | cut -d ' ' -f1)"
