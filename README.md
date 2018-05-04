@@ -2,6 +2,7 @@
 Does some simple but cool shit with a container and openshift oc cp
 
 To build your own container:
+
 * Clone this repo
 * Build the container
   * e.g. **_'docker build -t my_test_container:test1 ./'_**
