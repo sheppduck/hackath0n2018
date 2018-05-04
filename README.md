@@ -11,3 +11,5 @@ To build your own container:
 * Start the container
     * e.g. **_'sudo docker run <container_name>' # e.g. (2) 'docker run 788e'_**
 * Stay tuned on running this in daemon mode or something even **more awesome SOON!**
+
+Pre-built Docker image location: https://hub.docker.com/r/sheppduck/hackathon2018/
