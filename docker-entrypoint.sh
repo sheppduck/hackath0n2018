@@ -15,7 +15,7 @@ oc project $OC_PROJECT
 ## Grep for and add some add'l HUB PODs - how to use $1, $2, etc. for POD name vars?
 
 # Get all Namespaces and stuff into an array, trim the first line of the oc get
-GET_ALL_NS="array_of_ns=("${(@f)$(oc get ns | cut -d ' ' -f1 | awk '{if(NR>1)print}')}")"
+ARRAY_OF_NS=("${(@f)$(oc get ns | cut -d ' ' -f1 | awk '{if(NR>1)print}')}")
 NS=$1
 PODS=$2
 OC_OUT_DIR=$3
